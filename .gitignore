@@ -1,4 +1,5 @@
 patches/
 dwm
+dwm-msg
 *.o
 config.h
