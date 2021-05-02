@@ -70,7 +70,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_base03, "-nf", col_base0, "-sb", col_base02, "-sf", col_base1, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *flameshotgui[] = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -99,10 +98,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { 0,                            PrintScreen, spawn,        {.v = flameshotgui } },
-    /* Volume up/down */
-    { MODKEY,                       XK_minus, spawn,           SHCMD("pamixer -d 5") },
-    { MODKEY,                       XK_plus,  spawn,           SHCMD("pamixer -i 5") },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     /* Tags */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -113,7 +109,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
