@@ -41,6 +41,8 @@ static const Rule rules[] = {
 	/* class          instance    title               tags mask     iscentered   isfloating   monitor */
 	{ "Gimp",         NULL,       NULL,               0,            0,           1,           -1 },
 	{ "Firefox",      NULL,       NULL,               1 << 8,       0,           0,           -1 },
+	{ "st-256color",  NULL,       "pulsemixer",       0,            1,           1,           -1 },
+
 };
 
 /* layout(s) */
@@ -86,6 +88,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
+	{ MODKEY,                       XK_p,      spawn,          SHCMD("st -e pulsemixer") },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
