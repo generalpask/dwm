@@ -7,7 +7,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "LiterationMono Nerd Font:size=12" };
 static const char dmenufont[]       = "Fira Code:size=12";
-static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
+static const int usealtbar          = 0;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *altbarcmd        = "$XDG_CONFIG_HOME/polybar/launch.sh"; /* Alternate bar launch command */
 static const char col_gray1[]       = "#222222";
