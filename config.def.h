@@ -51,13 +51,24 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
-	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
-	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
+    /* symbol     arrange function */
+    { "[]=",      tile },    /* first entry is default */
+    { "><>",      NULL },    /* no layout function means floating behavior */
+    { "[M]",      monocle },
+    { "|M|",      centeredmaster },
+    { ">M>",      centeredfloatingmaster },
 };
+
+/* Alternative layout symbols for polybar (siji font) */
+/*
+static const Layout layouts[] = {
+    { "",      tile },
+    { "",      NULL },
+    { "",      monocle },
+    { "",      centeredmaster },
+    { ">M>",      centeredfloatingmaster },
+};
+*/
 
 /* key definitions */
 #define MODKEY Mod4Mask
